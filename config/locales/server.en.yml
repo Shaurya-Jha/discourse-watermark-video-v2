@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    watermark_v2_enabled: "Enable video watermarking"
+    watermark_v2_position: "Watermark position on video"
+    watermark_v2_size_percent: "Watermark size as % of video height"

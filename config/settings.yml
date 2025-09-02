@@ -1,0 +1,24 @@
+plugins:
+  watermark_v2_enabled:
+    default: true
+    client: true
+    description: "Enable watermarking for uploaded videos"
+
+  watermark_v2_position:
+    default: "top-left"
+    client: true
+    type: enum
+    choices:
+      - top-left
+      - top-right
+      - bottom-left
+      - bottom-right
+    description: "Watermark position on video"
+
+  watermark_v2_size_percent:
+    default: 10
+    client: true
+    type: integer
+    min: 1
+    max: 100
+    description: "Watermark size as percentage of video height"
