@@ -1,5 +1,5 @@
-# **Watermark V2** Plugin
+# discourse-watermark-video-v2
 
 **Plugin Summary**
 
-For more information, please see: **url to meta topic**
+Add watermark to videos uploaded.
