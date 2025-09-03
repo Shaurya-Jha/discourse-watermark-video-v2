@@ -2,7 +2,11 @@
 
 module ::WatermarkV2
   class Watermarker
-    WATERMARK_PATH = Rails.root.join("plugins", "watermark-v2", "assets", "images", "watermark.png")
+    # WATERMARK_PATH = Rails.root.join("plugins", "discourse-watermark-video-v2", "assets", "images", "watermark.png")
+    # 
+    # More robust way to prevent wrong watermark path is as below:
+    plugin_root = Rails.root.join("plugins", WatermarkV2::PLUGIN_NAME)
+    WATERMARK_PATH = File.join(plugin_root, "assets", "images", "watermark.png")
 
     def self.apply_tempfile(path)
       tmp_path = File.join(File.dirname(path), "wm_#{SecureRandom.hex(6)}.mp4")
