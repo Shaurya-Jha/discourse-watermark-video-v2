@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# name: watermark-v2
+# name: discourse-watermark-video-v2
 # about: Automatically watermarks uploaded videos with a custom image
 # version: 0.0.1
 # authors: Shaurya-Jha
@@ -8,8 +8,11 @@
 enabled_site_setting :watermark_v2_enabled
 
 module ::WatermarkV2
-  PLUGIN_NAME = "watermark-v2"
+  PLUGIN_NAME = "discourse-watermark-video-v2"
 end
+
+# Load engine + settings before hooks
+require_relative "lib/watermark_v2/engine"
 
 after_initialize do
   module ::WatermarkV2
@@ -46,5 +49,3 @@ after_initialize do
   ::UploadCreator.prepend(::WatermarkV2::UploadCreatorExtension)
 
 end
-
-require_relative "lib/watermark_v2/engine"
